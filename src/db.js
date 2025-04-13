@@ -11,7 +11,7 @@ db.exec(`
     )
     `);
 
-db.execute(`
+db.exec(`
     CREATE TABLE todos (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         user_id INTEGER,
