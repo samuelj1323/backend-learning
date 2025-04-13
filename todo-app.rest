@@ -17,3 +17,30 @@ Content-Type: application/json
     "username": "asdf",
     "password": "fdas"
 }
+### Get all todos
+GET http://localhost:5003/todos
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzQ0NTEyNzc1LCJleHAiOjE3NDQ1OTkxNzV9.fsh7-G8J2ttey_CBNf7QEQ6gWx9Fx4FT7t_VcnaKi20
+
+### Create a todo
+POST http://localhost:5003/todos
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzQ0NTEyNzc1LCJleHAiOjE3NDQ1OTkxNzV9.fsh7-G8J2ttey_CBNf7QEQ6gWx9Fx4FT7t_VcnaKi20
+Content-Type: application/json 
+
+{
+    "task": "Finish coding the projects"
+}
+
+### Update a todo (Protected)
+PUT http://localhost:5003/todos/2
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzQ0NTEyNjk1LCJleHAiOjE3NDQ1OTkwOTV9.XYoEY_UbOk8kz87KzMLKwveayMiZpvJ66Rx5TC-eel0
+Content-Type: application/json 
+
+{
+    "completed": 1
+}
+
+### DELETE a todo (Protected)
+DELETE http://localhost:5003/todos/2
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzQ0NTEyNzc1LCJleHAiOjE3NDQ1OTkxNzV9.fsh7-G8J2ttey_CBNf7QEQ6gWx9Fx4FT7t_VcnaKi20
+Content-Type: application/json 
+
