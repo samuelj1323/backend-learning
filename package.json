@@ -1,7 +1,7 @@
 {
   "name": "backend-learning",
   "version": "1.0.0",
-  "description": "Full stack todo application that uses NodeJS backend",
+  "description": "a dockerized Full stack todo application that uses NodeJS backend, postgres sql database, Prisma ORM",
   "main": "index.js",
   "type": "module",
   "scripts": {
@@ -20,9 +20,12 @@
   },
   "homepage": "https://github.com/samuelj1323/backend-learning#readme",
   "dependencies": {
+    "@prisma/client": "^6.6.0",
     "bcryptjs": "^3.0.2",
     "express": "^5.1.0",
-    "jsonwebtoken": "^9.0.2"
+    "jsonwebtoken": "^9.0.2",
+    "pg": "^8.14.1",
+    "prisma": "^6.6.0"
   },
   "devDependencies": {
     "nodemon": "^3.1.9"
