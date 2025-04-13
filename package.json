@@ -1,10 +1,11 @@
 {
   "name": "backend-learning",
   "version": "1.0.0",
-  "description": "",
+  "description": "Full stack todo application that uses NodeJS backend",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "dev": "nodemon server.js",
+    "dev": "node --watch --env-file=.env --experimental-strip-types --experimental-sqlite ./src/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -14,7 +15,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
   "bugs": {
     "url": "https://github.com/samuelj1323/backend-learning/issues"
   },
