@@ -17,7 +17,6 @@ router.post("/register", (req, res) => {
     const insertUser = db.prepare(`INSERT INTO users (username, password)
         VALUES (?, ?)`);
     const result = insertUser.run(username, hashedPassword);
-
     // Create a todo for them by default.
     const defaultTodo = `Hello! Add your first todo`;
     const insertTodo = db.prepare(`INSERT INTO todos (user_id, task)
@@ -42,7 +41,6 @@ router.post("/login", (req, res) => {
   try {
     const getUser = db.prepare(`SELECT * FROM users WHERE username = ?`);
     const user = getUser.get(username);
-
     if (!user) {
       return res.status(404).send({ message: "user not found" });
     }
